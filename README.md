@@ -2,6 +2,8 @@
 
 A lightweight, extensible vehicle simulator with modular sensors for student and research projects.
 
+-   Requires Godot 4.7.2 (stable) and GD Script 2.0. Download from [godotengine.org](https://godotengine.org/)
+
 > **Status: planning and initial project setup.** The capabilities below describe the intended product. A working simulator, performance benchmarks, and platform compatibility have not yet been verified.
 
 ## Purpose
