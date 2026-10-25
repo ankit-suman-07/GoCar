@@ -1,3 +1,40 @@
+cat >> .gitignore <<'EOF'
+
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# === Godot ===
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores (if you ever add C#)
+.mono/
+data_*/
+mono_crash.*.json
+
+# === Editors / IDEs ===
+.vscode/
+.idea/
+*.swp
+*~
+
+# === Python (for the planned SDK/controller) ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+EOF
