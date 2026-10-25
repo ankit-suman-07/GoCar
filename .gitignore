@@ -1,40 +1,122 @@
-cat >> .gitignore <<'EOF'
+# ==========================================
+# GoCar .gitignore
+# Tailored for: Godot 4.x, Python, macOS
+# ==========================================
 
-# === macOS ===
+# === 1. macOS System Files ===
+# General macOS clutter
 .DS_Store
 .AppleDouble
 .LSOverride
 ._*
 
-# === Godot ===
-# Godot 4+ specific ignores
-.godot/
-/android/
+# Thumbnails and volume metadata
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-# Godot-specific ignores
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# iCloud generated files
+*.icloud
+
+# === 2. Godot 4 Engine ===
+# Official Godot 4.1+ ignores [citation:1][citation:5]
+.godot/
+*.translation
+
+# Legacy/Common Godot ignores (safe to keep for compatibility)
 .import/
 export.cfg
 export_presets.cfg
-*.translation
+export_credentials.cfg
 
-# Imported translations (automatically generated from CSV files)
-*.translation
-
-# Mono-specific ignores (if you ever add C#)
+# Mono/C# specific (if you ever add C# support) [citation:2][citation:6]
 .mono/
 data_*/
 mono_crash.*.json
 
-# === Editors / IDEs ===
-.vscode/
-.idea/
-*.swp
-*~
-
-# === Python (for the planned SDK/controller) ===
+# === 3. Python (Planned SDK & Tooling) ===
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-.venv/
-venv/
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
 .env
-EOF
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# === 4. Editors & IDEs ===
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, Rider, etc.)
+.idea/
+*.sln.iml
+
+# Vim
+*.swp
+*.swo
+*~
+
+# General editor backups
+*.tmp
+*.bak
